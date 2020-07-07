@@ -15,16 +15,15 @@ declare global {
   namespace JSX {
     interface Element extends VNode {}
 
-    // 固有的属性
+    // Common attributes of all components (including custom components)
     interface IntrinsicAttributes {
       [attribute: string]: any;
     }
-
-    // 固有的组件
+    
     interface IntrinsicElements {
       [element: string]: any;
     }
-
+    // Read "$props" field in the custom components return type as property of the components
     interface ElementAttributesProperty {
       $props: any;
     }
